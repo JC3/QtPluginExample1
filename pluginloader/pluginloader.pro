@@ -16,8 +16,9 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp \
-    valuesource.cpp
+    constantvaluesource.cpp
 
 HEADERS += \
     plugininterface.h \
+    constantvaluesource.h \
     valuesource.h

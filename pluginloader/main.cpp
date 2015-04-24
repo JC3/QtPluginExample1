@@ -1,4 +1,5 @@
 #include "plugininterface.h"
+#include "constantvaluesource.h"
 #include <QPluginLoader>
 #include <QDebug>
 
@@ -13,7 +14,7 @@ int main (int argc, char *argv[]) {
     PluginInterface *plugin = qobject_cast<PluginInterface *>(loader.instance());
 
     if (plugin)
-        plugin->outputValue(new ValueSource(42));
+        plugin->outputValue(new ConstantValueSource(42));
     else
         qWarning() << "error:" << loader.errorString();
 
